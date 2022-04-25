@@ -1,0 +1,7 @@
+__pycache__
+build
+dist
+init-exe-build
+venv
+a.txt
+userdata.*
