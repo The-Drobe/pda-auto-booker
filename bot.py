@@ -7,8 +7,10 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.chrome.options import Options
 from time import sleep
 import datetime
+import os
 
 options = Options()
+options.add_argument("--headless")
 options.binary_location = "chromium/chrome.exe"
 driver = webdriver.Chrome(service=Service("chromedriver.exe"), chrome_options=options)
 
@@ -166,7 +168,23 @@ def FindTest():
 
 def start():
     login()
-    print("Test found: " + str(FindTest()))
+    out = FindTest()
+    os.system('cls')
+    print('''                                                                                 
+     _____ ____  _____    _____ _____ _____ _____    _____ _____ _____ _____ _____ _____ 
+    |  _  |    \|  _  |  |  _  |  |  |_   _|     |  | __  |     |     |  |  |   __| __  |
+    |   __|  |  |     |  |     |  |  | | | |  |  |  | __ -|  |  |  |  |    -|   __|    -|
+    |__|  |____/|__|__|  |__|__|_____| |_| |_____|  |_____|_____|_____|__|__|_____|__|__|                                                                                    
+    ''')
+    print('''
+  _______ ______  _____ _______   ______ ____  _    _ _   _ _____  
+ |__   __|  ____|/ ____|__   __| |  ____/ __ \| |  | | \ | |  __ \ 
+    | |  | |__  | (___    | |    | |__ | |  | | |  | |  \| | |  | |
+    | |  |  __|  \___ \   | |    |  __|| |  | | |  | | . ` | |  | |
+    | |  | |____ ____) |  | |    | |   | |__| | |__| | |\  | |__| |
+    |_|  |______|_____/   |_|    |_|    \____/ \____/|_| \_|_____/                                                                 
+    ''')
+    print(out)
     input("press any key to exit: ")
 
 

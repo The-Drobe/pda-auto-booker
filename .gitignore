@@ -5,3 +5,4 @@ init-exe-build
 venv
 a.txt
 userdata.*
+main.spec
