@@ -6,3 +6,5 @@ venv
 a.txt
 userdata.*
 main.spec
+builds
+exe-build-2
