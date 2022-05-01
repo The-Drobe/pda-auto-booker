@@ -9,7 +9,7 @@ This is an application that I have built to get tests on the [Practical Driving 
 Head over to the release tab and download the zip. This application only supports windows at the moment. <br>
 1. Unzip the file
 2. run main.exe
-3. Select setup with the number 2 and follow the setup through
+3. Select setup with the number 1 and follow the setup through
 4. Run the Bot and wait untill it finds a test with what you specified
 
 # Issues
