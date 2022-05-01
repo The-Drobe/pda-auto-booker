@@ -193,3 +193,5 @@ def TimeRange():
 
 if __name__ == "__main__":
     MainMenu()
+
+# Copyright 2022 Giles Wardrobe

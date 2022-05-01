@@ -192,3 +192,5 @@ def start():
 #     login()
 #     print("Test found: " + str(FindTest()))
 #     input("press any key to exit: ")
+
+# Copyright 2022 Giles Wardrobe
