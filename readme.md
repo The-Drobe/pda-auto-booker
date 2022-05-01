@@ -14,3 +14,13 @@ Head over to the release tab and download the zip. This application only support
 
 # Issues
 If any issues apppear report them in the issues tab
+
+# To run the Script On Windows
+There is a currently a bug in the python-readchar module That prevents the interface from functioning properly on Windows. It has been fixed in this fork https://github.com/Cube707/python-readchar you will need to install this after installing inquirer
+
+Pull request: https://github.com/magmax/python-readchar/pull/71
+
+# Running The script
+1. clone this repo
+2. run `pip install -r requirements.txt`
+3. run main.py with `python main.py` 
