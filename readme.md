@@ -6,7 +6,7 @@
 This is an application that I have built to get tests on the [Practical Driving Assessment Bookings Site](https://online.transport.wa.gov.au/pdabooking/manage/?1) for Western Australia. With this you wont need to check back every hour to see if there is a test available
 
 # Install
-Head over to the release tab and download the zip. This application only supports windows at the moment. <br>
+Head over to the [release tab](https://github.com/The-Drobe/pda-auto-booker/releases/) and download the zip. This application only supports windows at the moment. <br>
 1. Unzip the file
 2. run main.exe
 3. Select setup with the number 1 and follow the setup through
@@ -28,3 +28,5 @@ Pull request: https://github.com/magmax/python-readchar/pull/71
 # Notes
 Currently prints out the following error message this message is fine just ignore it the script is still running
 ![errorthatisfine.PNG](https://github.com/The-Drobe/pda-auto-booker/blob/main/ReadmeFiles/img/errorthatisfine.PNG?raw=true)
+
+Bitdefender flags the release files as malicious this is a false positive you can review the code if you dont belive me. The code is complied to an exe via [pyinstaller](https://pyinstaller.org/en/stable/). VirusTotal link [here](https://www.virustotal.com/gui/file/98954bca7bb1ffa807fbd280f1d667d1309bdb3aacd893e78f93a6216a5b588d/detection).
