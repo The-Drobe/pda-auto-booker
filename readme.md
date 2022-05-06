@@ -24,3 +24,7 @@ Pull request: https://github.com/magmax/python-readchar/pull/71
 1. clone this repo
 2. run `pip install -r requirements.txt`
 3. run main.py with `python main.py` 
+
+# Notes
+Currently prints out the following error message this message is fine just ignore it the script is still running
+![errorthatisfine.PNG](http://url/to/img.png)
