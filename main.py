@@ -1,6 +1,8 @@
 import os
 import inquirer
+import bot
 from time import sleep
+Bot = bot.main()
 
 def MainMenu():
     os.system('cls')
@@ -15,18 +17,20 @@ def MainMenu():
     print("2) Start")
     print("3) Set Time Range")
     print("4) Select Sites")
+    print("5) Run with head (see chrome)")
     
     UserSelection = input("Selection: ")
 
     if UserSelection == "1":
         SetUp()
     elif UserSelection == "2":
-        import bot
-        bot.start()
+        Bot.start(False)
     elif UserSelection == "3":
         TimeRange()
     elif UserSelection == "4":
         SelectSites()
+    elif UserSelection == "5":
+        Bot.start(True)
     else:
         MainMenu()
 
