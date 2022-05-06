@@ -13,37 +13,37 @@ class main():
     # options.add_argument("--headless")
     # options.binary_location = "chromium/chrome.exe"
     # driver = webdriver.Chrome(service=Service("chromedriver.exe"), chrome_options=options)
+    def imports(self):
+        with open("userdata.txt", "r") as file:
+            # LicenceNumber;Expirydate;FirstName;Surname;DateOfBirth
+            userdata = file.read()
+        self.userdata = userdata.split(";")
+        self.LicenceNumber = self.userdata[0]
+        self.Expirydate = self.userdata[1]
+        self.FirstName = self.userdata[2]
+        self.Surname = self.userdata[3]
+        self.DateOfBirth = self.userdata[4]
 
-    with open("userdata.txt", "r") as file:
-        # LicenceNumber;Expirydate;FirstName;Surname;DateOfBirth
-        userdata = file.read()
-    userdata = userdata.split(";")
-    LicenceNumber = userdata[0]
-    Expirydate = userdata[1]
-    FirstName = userdata[2]
-    Surname = userdata[3]
-    DateOfBirth = userdata[4]
+        with open("DateRangeTimeRange.txt", "r") as file:
+            # LicenceNumber;Expirydate;FirstName;Surname;DateOfBirth
+            DateRangeTimeRange = file.read()
+        self.DateRangeTimeRange = DateRangeTimeRange.split(";")
+        self.MinDate = self.DateRangeTimeRange[0]
+        self.MaxDate = self.DateRangeTimeRange[1]
+        self.MinTime = self.DateRangeTimeRange[2]
+        self.MaxTime = self.DateRangeTimeRange[3]
 
-    with open("DateRangeTimeRange.txt", "r") as file:
-        # LicenceNumber;Expirydate;FirstName;Surname;DateOfBirth
-        DateRangeTimeRange = file.read()
-    DateRangeTimeRange = DateRangeTimeRange.split(";")
-    MinDate = DateRangeTimeRange[0]
-    MaxDate = DateRangeTimeRange[1]
-    MinTime = DateRangeTimeRange[2]
-    MaxTime = DateRangeTimeRange[3]
+        # print(userdata)
 
-    # print(userdata)
+        with open("SitesToBookMetro.txt", "r") as file:
+            SitesToBookMetro = file.read()
+        self.SitesToBookMetro = SitesToBookMetro.split(";")
+        with open("SitesToBookRegional.txt", "r") as file:
+            SitesToBookRegional = file.read()
+        self.SitesToBookRegional = SitesToBookRegional.replace("\n", "")
+        self.SitesToBookRegional = self.SitesToBookRegional.split(";")
 
-    with open("SitesToBookMetro.txt", "r") as file:
-        SitesToBookMetro = file.read()
-    SitesToBookMetro = SitesToBookMetro.split(";")
-    with open("SitesToBookRegional.txt", "r") as file:
-        SitesToBookRegional = file.read()
-    SitesToBookRegional = SitesToBookRegional.replace("\n", "")
-    SitesToBookRegional = SitesToBookRegional.split(";")
-
-    # print(SitesToBookRegional)
+        # print(SitesToBookRegional)
 
     def login(self):
         self.driver.get("https://online.transport.wa.gov.au/pdabooking/manage/?0")
@@ -167,6 +167,7 @@ class main():
             self.FindTest()
 
     def start(self, head):
+        self.imports()
         self.options = Options()
         if not head:
             self.options.add_argument("--headless")
